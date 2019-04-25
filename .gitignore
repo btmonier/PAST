@@ -7,3 +7,6 @@ doc
 .Rproj.user/
 PAST.Rproj
 .Rproj.user
+
+# Add rproj
+*.Rproj
