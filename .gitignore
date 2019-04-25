@@ -10,3 +10,7 @@ PAST.Rproj
 
 # Add rproj
 *.Rproj
+
+# Vim
+*.swp
+*.swo
