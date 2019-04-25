@@ -147,6 +147,28 @@ server <- function(input, output) {
                              "Effect Column Name", 
                              value = "Effect")),
           fileInput("LD_file", "Linkage Disequilibrium File"),
+          menuItem("LD Column Names",
+                   textInput("LD_locus_1", 
+                             "Locus1 Column Name", 
+                             value = "Locus1"),
+                   textInput("LD_position_1", 
+                             "Position1 Column Name", 
+                             value = "Position1"),
+                   textInput("LD_site_1", 
+                             "Locus Column Name", 
+                             value = "Site1"),
+                   textInput("LD_position_2", 
+                             "Site Column Name", 
+                             value = "Position2"),
+                   textInput("LD_site_2", 
+                             "Site Column Name", 
+                             value = "Site2"),
+                   textInput("LD_distance", 
+                             "Site Column Name", 
+                             value = "Dist_bp"),
+                   textInput("LD_R2", 
+                             "Effect Column Name", 
+                             value = "R.2")),
           fileInput("genes_file", "Genes File"),
           fileInput("pathway_file", "Pathways File"),
           
@@ -357,6 +379,13 @@ server <- function(input, output) {
     LD_file <- input$LD_file
     if (is.null(LD_file))
       return(NULL)
+    LD_columns = c(input$LD_locus_1,
+                   input$LD_position_1,
+                   input$LD_site_1,
+                   input$LD_position_2,
+                   input$LD_site_2,
+                   input$LD_distance,
+                   input$LD_R2)
     load_LD(LD_file$datapath)
   })
   
