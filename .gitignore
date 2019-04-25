@@ -7,3 +7,10 @@ doc
 .Rproj.user/
 PAST.Rproj
 .Rproj.user
+
+# Add Rproj
+*.Rproj
+
+# Add vim
+*.swp
+*.swo
