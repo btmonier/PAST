@@ -431,6 +431,8 @@ server <- function(input, output) {
         } # elif (input$genes_file == "version.C") {
             #return(paste0("path/to/gff/", "version.C", extension))
             #}
+        
+        ## -------------  ##
     })
     
     # assign SNPs to genes
@@ -474,6 +476,8 @@ server <- function(input, output) {
         } # elif (input$pathway_file == "version.3") {
         #return(paste0("path/to/gff/", "version.3", extension))
         #}
+        
+        ## -------------  ##
     })
     
     # find pathway significance
